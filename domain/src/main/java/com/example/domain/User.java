@@ -15,9 +15,6 @@ import java.io.Serializable;
 public class User implements Serializable{
     private static final long serialVersionUID = 1L;
 
-    public User(String userName, String email, String nickName, String passWord, String regTime){
-
-    }
     @Id
     @GeneratedValue
     private Long id;
@@ -32,6 +29,15 @@ public class User implements Serializable{
     @Column(nullable = false)
     private String regTime;
 
+    public User(){}
+
+    public User(String userName, String email, String nickName, String passWord, String regTime){
+        this.userName = userName;
+        this.email = email;
+        this.nickName = nickName;
+        this.passWord = passWord;
+        this.regTime = regTime;
+    }
     //省略getter settet方法、构造方法
 
     public Long getId() {

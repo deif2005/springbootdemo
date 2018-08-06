@@ -1,5 +1,6 @@
 package com.example.springbootdemo.controller;
 
+import com.example.domain.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -11,5 +12,13 @@ public class HelloWorldController {
     @RequestMapping("/hello")
     public String index() {
         return "Hello World";
+    }
+
+    @RequestMapping("/getUser")
+    public User getUser() {
+        User user=new User();
+        user.setUserName("小明");
+        user.setPassWord("123");
+        return user;
     }
 }
