@@ -3,7 +3,7 @@ buildscript {
 		springBootVersion = '2.0.1.RELEASE'
 	}
 	repositories {
-		repositories { maven { url 'http://192.168.1.127:8081/repository/maven-public/' } }
+		repositories { maven { url 'http://192.168.1.200:8081/repository/maven-public/' } }
 		mavenCentral()
 	}
 	dependencies {
@@ -30,7 +30,9 @@ repositories {
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
-	compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.0.1.RELEASE'
-//	compile group: 'org.springframework.boot', name: 'spring-boot-devtools', version: '1.5.12.RELEASE'
-//	compile group: 'org.springframework.boot', name: 'spring-boot-gradle-plugin', version: '1.5.8.RELEASE'
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.0.1.RELEASE'  //引入web模块
+//	热启动在正常开发项目中已经很常见了吧，虽然平时开发web项目过程中，改动项目启重启总是报错；
+//	但springBoot对调试支持很好，修改之后可以实时生效，需要添加以下的配置：
+	compile group: 'org.springframework.boot', name: 'spring-boot-devtools', version: '1.5.12.RELEASE'
+	compile group: 'org.springframework.boot', name: 'spring-boot-gradle-plugin', version: '1.5.8.RELEASE'
 }
