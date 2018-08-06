@@ -1,0 +1,16 @@
+Thymeleaf 介绍
+
+Thymeleaf是一款用于渲染XML/XHTML/HTML5内容的模板引擎。类似JSP，Velocity，FreeMaker等，它也可以轻易的与Spring MVC等Web
+框架进行集成作为Web应用的模板引擎。与其它模板引擎相比，Thymeleaf最大的特点是能够直接在浏览器中打开并正确显示模板页面，
+而不需要启动整个Web应用。
+
+好了，你们说了我们已经习惯使用了什么 velocity,FreMaker，beetle之类的模版，那么到底好在哪里呢？ 比一比吧 Thymeleaf是与
+众不同的，因为它使用了自然的模板技术。这意味着Thymeleaf的模板语法并不会破坏文档的结构，模板依旧是有效的XML文档。
+模板还可以用作工作原型，Thymeleaf会在运行期替换掉静态值。Velocity与FreeMarker则是连续的文本处理器。
+下面的代码示例分别使用Velocity、FreeMarker与Thymeleaf打印出一条消息：
+
+Velocity: <p>$message</p>
+FreeMarker: <p>${message}</p>
+Thymeleaf: <p th:text="${message}">Hello World!</p>
+
+** 注意，由于Thymeleaf使用了XML DOM解析器，因此它并不适合于处理大规模的XML文件。**
