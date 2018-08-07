@@ -25,3 +25,8 @@
 /dist/
 /nbdist/
 /.nb-gradle/
+common/gradle/wrapper/gradle-wrapper.jar
+common/gradle/wrapper/gradle-wrapper.properties
+common/gradlew
+common/gradlew.bat
+common/gradle/wrapper/gradle-wrapper.jar
